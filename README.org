@@ -1,0 +1,48 @@
+* AG Zipper
+Experiments in Haskell to define recursive functions on
+zippers following the attribute grammar approach.
+
+This work is inspired by [1,2,3].
+
+Attribute grammar can be implemented as recursive functions
+on the zipper [4] of a datastructure.
+
+Briefly, a zipper captures the focus on a subtree in the
+context of the whole tree, thus it is a pair of the subtree
+and its context. We can move the focus up in the tree, or to
+the siblings.
+
+Inherited attributes are defined by recursion on the context.
+Synthesized attributes are defined by recursion on the subtree.
+
+This experiment shows that attribute grammar are a simple
+generalisation of the common recursive definitions that we
+can write in a functional programming language: they simply
+compute synthesized attributes. Extending a functional
+language so that recursion on the context is also possible
+would add a great deal of modularity.
+
+To show this in Haskell, we define a type class of
+tree-coalgebras of which both the tree and its zipper are
+instance. This type clas gives a view [5] of the datatype,
+suitable to define catamorphisms. In addition, the same
+function can also be applied to a zipper.
+
+In the file [[https://github.com/balez/ag-a-la-carte/blob/master/Repmin.hs][Repmin]] we illustrate this principle with a very
+common example. This technique must be generalised to deal
+with mutually recursive datatypes. We give two methods:
+[[https://github.com/balez/ag-a-la-carte/blob/master/GADTs/Desk.hs][one]]
+uses GADTS with a type index to define the base functor of datatype family,
+[[https://github.com/balez/ag-a-la-carte/blob/master/TypeFamilies][the other]] gives a new way to define the fixed-point of mutually recursive
+datatypes using type families instead of gadts.
+
+
+Drawback of this approach in Haskell: unless memoization is
+used, the computational complexity is very poor compared to
+other attribute grammar implementations.
+ 
+ - [1] Comonadic functional attribute evaluation. Tarmo Uustalu and Varmo Vene.
+ - [2] Zipper-Based Attribute Grammars and Their Extensions. Pedro Martins and Joao Paulo Fernandes and Joao Saraiva
+ - [3] Attribute Grammars as Recursion Schemes over Cyclic Representations of Zippers. Eric Badouel and Bernard Fotsing and Rodrigue Tchougong.
+ - [4] The Zipper. Gérard Huet.
+ - [5] Views: A Way for Pattern Matching to Cohabit with Data Abstraction
