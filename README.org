@@ -40,9 +40,10 @@ datatypes using type families instead of gadts.
 Drawback of this approach in Haskell: unless memoization is
 used, the computational complexity is very poor compared to
 other attribute grammar implementations.
- 
- - [1] Comonadic functional attribute evaluation. Tarmo Uustalu and Varmo Vene.
- - [2] Zipper-Based Attribute Grammars and Their Extensions. Pedro Martins and Joao Paulo Fernandes and Joao Saraiva
- - [3] Attribute Grammars as Recursion Schemes over Cyclic Representations of Zippers. Eric Badouel and Bernard Fotsing and Rodrigue Tchougong.
- - [4] The Zipper. Gérard Huet.
- - [5] Views: A Way for Pattern Matching to Cohabit with Data Abstraction
+
+** References
+- [1] Comonadic functional attribute evaluation. Tarmo Uustalu and Varmo Vene.
+- [2] Zipper-Based Attribute Grammars and Their Extensions. Pedro Martins and Joao Paulo Fernandes and Joao Saraiva.
+- [3] Attribute Grammars as Recursion Schemes over Cyclic Representations of Zippers. Eric Badouel and Bernard Fotsing and Rodrigue Tchougong.
+- [4] The Zipper. Gérard Huet.
+- [5] Views: A Way for Pattern Matching to Cohabit with Data Abstraction. Philip Wadler.
