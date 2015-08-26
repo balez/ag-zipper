@@ -28,12 +28,12 @@ instance. This type clas gives a view [5] of the datatype,
 suitable to define catamorphisms. In addition, the same
 function can also be applied to a zipper.
 
-In the file [[https://github.com/balez/ag-a-la-carte/blob/master/Repmin.hs][Repmin]] we illustrate this principle with a very
+In the file [[https://github.com/balez/ag-zipper/blob/master/Repmin.hs][Repmin]] we illustrate this principle with a very
 common example. This technique must be generalised to deal
 with mutually recursive datatypes. We give two methods:
-[[https://github.com/balez/ag-a-la-carte/blob/master/GADTs/Desk.hs][one]]
+[[https://github.com/balez/ag-zipper/blob/master/GADTs/Desk.hs][one]]
 uses GADTS with a type index to define the base functor of datatype family,
-[[https://github.com/balez/ag-a-la-carte/blob/master/TypeFamilies][the other]] gives a new way to define the fixed-point of mutually recursive
+[[https://github.com/balez/ag-zipper/blob/master/TypeFamilies][the other]] gives a new way to define the fixed-point of mutually recursive
 datatypes using type families instead of gadts.
 
 
