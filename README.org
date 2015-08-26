@@ -33,7 +33,7 @@ common example. This technique must be generalised to deal
 with mutually recursive datatypes. We give two methods:
 [[https://github.com/balez/ag-zipper/blob/master/GADTs/Desk.hs][one]]
 uses GADTS with a type index to define the base functor of datatype family,
-[[https://github.com/balez/ag-zipper/blob/master/TypeFamilies][the other]] gives a new way to define the fixed-point of mutually recursive
+[[https://github.com/balez/ag-zipper/blob/master/TypeFamilies/Desk.hs][the other]] gives a new way to define the fixed-point of mutually recursive
 datatypes using type families instead of gadts.
 
 
